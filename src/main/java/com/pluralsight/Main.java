@@ -16,7 +16,7 @@ public class Main {
         System.out.printf("Total: $%.2f%n", r.getReservationTotal());
 
         Employee employee1 = new Employee(1, "Mercy", "Front Desk", 80.00, 50);
-        System.out.println(employee1.getName() + " total pay: $" + employee1.getTotalPay());
+        System.out.println(employee1.getEmployeeId() + employee1.getName() + " total pay: $" + employee1.getTotalPay());
         System.out.println("Regular hours: " + employee1.getRegularHours());
         System.out.println("Overtime hours: " + employee1.getOvertimeHours());
 

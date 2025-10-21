@@ -1,6 +1,8 @@
 package com.pluralsight;
 
 public class Employee {
+
+    //backing variables
     private int employeeId;
     private String name;
     private String department;

@@ -1,6 +1,8 @@
 package com.pluralsight;
 
 public class Room {
+
+    //backing variables aka private fields
     private int numberOfBeds;
     private double price;
     private boolean occupied;
@@ -29,6 +31,7 @@ public class Room {
         return dirty;
     }
 
+    //derived getter
     public boolean isAvailable() {
         return !occupied && !dirty;
     }

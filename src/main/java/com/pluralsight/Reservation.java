@@ -15,26 +15,15 @@ public class Reservation {
         return roomType;
     }
 
-    public void setRoomType(String roomType) {
-        this.roomType = roomType;
-    }
-
     public int getNumberOfNights() {
         return numberOfNights;
-    }
-
-    public void setNumberOfNights(int numberOfNights) {
-        this.numberOfNights = numberOfNights;
     }
 
     public boolean isWeekend() {
         return isWeekend;
     }
 
-    public void setIsWeekend(boolean isWeekend) {
-        this.isWeekend = isWeekend;
-    }
-
+    //derived getter for price
     public double getPrice(){
         double pricePerNight;
 
@@ -51,6 +40,7 @@ public class Reservation {
         return pricePerNight;
     }
 
+    //derived getter for total cost
     public double getReservationTotal() {
         return getPrice() * numberOfNights;
     }
