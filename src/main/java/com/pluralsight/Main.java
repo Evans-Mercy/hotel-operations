@@ -9,5 +9,8 @@ public class Main {
         System.out.println("Dirty: " + r.isDirty());
         System.out.println(("Available: " + r.isAvailable()));
 
+        Reservation r = new Reservation("king", 3, true);
+        System.out.println();
+
     }
 }
