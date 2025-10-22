@@ -21,5 +21,35 @@ public class Hotel {
         this.bookedBasicRooms = bookedBasicRooms;
     }
 
+    //derived getters
+    public int getAvailableSuites() {
+        return numberOfSuites - bookedSuites;
+    }
 
+    public int getAvailableRooms() {
+        return numberOfRooms - bookedBasicRooms;
+    }
+
+    //book room method
+    public boolean bookRoom(int numberOfRooms, boolean isSuite) {
+        if (isSuite) {
+            if (numberOfRooms <= getAvailableSuites()) {
+                bookedSuites += numberOfRooms;
+                System.out.println(numberOfRooms + "suite(s) booked.");
+                return true;
+            } else {
+                System.out.println("Not enough suites available.");
+                return false;
+            }
+        } else {
+            if (numberOfRooms <= getAvailableRooms()) {
+                bookedBasicRooms += numberOfRooms;
+                System.out.println(numberOfRooms + "basic room(s) booked.");
+                return true;
+            } else {
+                System.out.println("Not enough basic rooms available.");
+                return false;
+            }
+        }
+    }
 }
