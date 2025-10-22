@@ -1,18 +1,20 @@
 package com.pluralsight;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 public class Room {
 
     //backing variables aka private fields
     private int numberOfBeds;
     private double price;
-    private boolean occupied;
-    private boolean dirty;
+    private boolean isOccupied;
+    private boolean isDirty;
 
-    public Room(int numberOfBeds, double price, boolean occupied, boolean dirty) {
+    public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
-        this.occupied = occupied;
-        this.dirty = dirty;
+        this.isOccupied = isOccupied;
+        this.isDirty = isDirty;
     }
 
     public int getNumberOfBeds() {
@@ -24,15 +26,43 @@ public class Room {
     }
 
     public boolean isOccupied() {
-        return occupied;
+        return isOccupied;
     }
 
     public boolean isDirty() {
-        return dirty;
+        return isDirty;
     }
 
     //derived getter
     public boolean isAvailable() {
-        return !occupied && !dirty;
+        return !isOccupied && !isDirty;
+    }
+
+    public void checkIn(){
+        if (!isAvailable()) {
+            System.out.println("Room is not available for check-in.");
+        } else {
+            isOccupied = true;
+            isDirty = true;
+            System.out.println("Guest checked in. Room is now occupied and dirty.");
+        }
+    }
+
+    public void checkOut(){
+        if (!isOccupied) {
+            System.out.println("Room is already vacant");
+        } else {
+            isDirty = false;
+            System.out.println("Guest checked out. Room is now vacant but dirty.");
+        }
+    }
+
+    public void cleanRoom() {
+        if (!isDirty) {
+            System.out.println("Room is already clean.");
+        } else {
+            isDirty = false;
+            System.out.println("Room has been cleaned and is now available");
+        }
     }
 }
