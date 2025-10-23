@@ -30,7 +30,7 @@ class RoomTest {
 
         //Assert
         assertFalse(room1.isOccupied(), "Room should not be occupied after checkout");
-        assertFalse(room1.isDirty(), "Room should still be dirty after checkout.");
+        assertTrue(room1.isDirty(), "Room should still be dirty after checkout.");
 
     }
 
@@ -40,7 +40,7 @@ class RoomTest {
         Room room1 = new Room(1, 200.0, false, true);
 
         //Act
-        room1.cleanRoom();
+        room1.cleanRoom();  //skip to fail
 
         //Assert
         assertFalse(room1.isDirty(), "Room should be clean.");
