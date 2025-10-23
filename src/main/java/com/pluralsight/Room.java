@@ -50,6 +50,7 @@ public class Room {
         if (!isOccupied) {
             System.out.println("Room is already vacant");
         } else {
+            isOccupied = false;
             isDirty = false;
             System.out.println("Guest checked out. Room is now vacant but dirty.");
         }
