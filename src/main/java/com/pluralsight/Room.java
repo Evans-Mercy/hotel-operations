@@ -1,7 +1,5 @@
 package com.pluralsight;
 
-import jdk.swing.interop.SwingInterOpUtils;
-
 public class Room {
 
     //backing variables aka private fields
