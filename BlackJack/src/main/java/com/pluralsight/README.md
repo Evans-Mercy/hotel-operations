@@ -1,6 +1,6 @@
 To Do:
 
-Classes - Main (contains main game logic)
+Classes - Main (entry point starts the game and handles input)
         - Card (represents a single playing card)
         - Deck (Holds all cards, can shuffle and deal cards)
         - Hand (Represents a player's hand)
@@ -13,11 +13,12 @@ Main:- asks how many players are playing
      - displays all player hands and scores
      - determine who's closest to 21 without going over
 
-Card:- rank
-     - suit
-     - value
+Card:- rank?
+     - suit?
+     - value?
 
-Deck:- need to shuffle cards 
+Deck:- holds all cards
+     - need to shuffle cards 
      - deal cards (2 cards to each hand)
 
 Hand:- holds the cards a player currently has
@@ -38,4 +39,7 @@ Game flow
     - Deal 2 cards to each player's hand
     - Display each hand and its total
 
-3.
+4. Determine winner
+    - If player's total is closest to 21 without going over
+
+Unit Testing
