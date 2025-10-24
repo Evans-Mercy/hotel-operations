@@ -32,7 +32,7 @@
 - handles the Ace rule
 
 ### Player:
--represents an individual player
+- represents an individual player
 - stores the players name and their hand
 - helps identify each player during the game
 
