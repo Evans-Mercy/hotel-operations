@@ -13,11 +13,11 @@ Main:- asks how many players are playing
      - displays all player hands and scores
      - determine who's closest to 21 without going over
 
-Card:- rank?
-     - suit?
-     - value?
+Card:- suit
+     - value
+     - isFaceUp
 
-Deck:- holds all cards
+Deck:- holds all 52 cards
      - need to shuffle cards 
      - deal cards (2 cards to each hand)
 
