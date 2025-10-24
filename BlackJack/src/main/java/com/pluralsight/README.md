@@ -9,35 +9,34 @@
         - Player (to store name & hand separately)
 
 ### Main:
-    - asks how many players are playing
-     - asks for each players name
-     - creates and shuffles a deck
-     - deals 2 cards to each player
-     - displays all player hands and scores
-     - determine who's closest to 21 without going over
+- asks how many players are playing
+- asks for each players name
+- creates and shuffles a deck
+- deals 2 cards to each player
+- displays all player hands and scores
+- determine who's closest to 21 without going over
 
 ### Card:
-     - suit
-     - value
-     - isFaceUp
+- suit
+- value
+- isFaceUp
 
 ### Deck:
-     - holds all 52 cards
-     - need to shuffle cards 
-     - deal cards (2 cards to each hand)
+- holds all 52 cards
+- need to shuffle cards 
+- deal cards (2 cards to each hand)
 
 ### Hand:
-     - holds the cards a player currently has
-     - calculates the total value of the hand
-     - handles the Ace rule
+- holds the cards a player currently has
+- calculates the total value of the hand
+- handles the Ace rule
 
 ### Player:
-       -represents an individual player
-       - stores the players name and their hand
-       - helps identify each player during the game
+-represents an individual player
+- stores the players name and their hand
+- helps identify each player during the game
 
 ## Game flow
-##
 1. Set up
     - Prompt the user for the number of players
     - Create a deck and shuffle it
