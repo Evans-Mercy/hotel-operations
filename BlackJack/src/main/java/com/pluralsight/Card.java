@@ -12,11 +12,19 @@ public class Card {
     }
 
     public String getSuit() {
-        return suit;
+        if(isFaceUp){
+            return suit;
+        }else {
+            return "#";
+        }
     }
 
     public String getValue() {
-        return value;
+        if (isFaceUp){
+            return value;
+        } else {
+            return "#";
+        }
     }
 
     public boolean isFaceUp() {
