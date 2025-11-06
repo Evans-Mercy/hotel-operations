@@ -13,12 +13,12 @@ public class DealershipFileManager {
 
       try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 
-          //first line
+          //first line - dealership info
           String line = reader.readLine();
           String[] lineParts = line.split("\\|");
           Dealership dealership = new Dealership(lineParts[0], lineParts[1], lineParts[2]);
 
-          //remaining lines
+          //remaining lines - vehicles
           while ((line = reader.readLine()) != null) {
               String [] v = line.split("\\|");
 

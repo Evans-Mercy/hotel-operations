@@ -14,7 +14,7 @@ public class Dealership {
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.inventory = new ArrayList<>();
+        this.inventory = new ArrayList<>(); //initializes the arraylist
     }
 
     //getters
@@ -48,7 +48,7 @@ public class Dealership {
         this.inventory = inventory;
     }
 
-    //derived getters
+    //returns a copy
     public List<Vehicle> getAllVehicles(){
         return new ArrayList<>(inventory);
     }

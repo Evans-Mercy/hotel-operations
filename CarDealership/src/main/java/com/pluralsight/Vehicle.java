@@ -1,7 +1,5 @@
 package com.pluralsight;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Vehicle {
     //holds info about a specific vehicle
     private int vin;

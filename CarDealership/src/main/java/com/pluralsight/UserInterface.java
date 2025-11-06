@@ -5,7 +5,8 @@ public class UserInterface {
     Dealership dealership;
 
     public UserInterface() {
+        DealershipFileManager fileManager = new DealershipFileManager();
 
-        this.dealership = dealership;
+        this.dealership = fileManager.getDealership();
     }
 }
