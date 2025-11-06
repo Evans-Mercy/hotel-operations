@@ -13,6 +13,10 @@ public class Vehicle {
     private int odometer;
     private double price;
 
+    public Vehicle(){
+
+    }
+
     public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, int odometer, double price) {
         this.vin = vin;
         this.year = year;
@@ -24,6 +28,7 @@ public class Vehicle {
         this.price = price;
     }
 
+    //getters and setters
     public int getVin() {
         return vin;
     }
@@ -93,6 +98,6 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "vin, year, make, model,vehicleType,color, odometer, price";
+        return vin + " " + year + " " + make + " " + model + " " + vehicleType + " " + color + " " + odometer + " " + price;
     }
 }

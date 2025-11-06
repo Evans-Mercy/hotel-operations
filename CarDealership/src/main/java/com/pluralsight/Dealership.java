@@ -44,10 +44,6 @@ public class Dealership {
         this.phone = phone;
     }
 
-    public List<Vehicle> getInventory() {
-        return new ArrayList<>(inventory);
-    }
-
     public void setInventory(List<Vehicle> inventory) {
         this.inventory = inventory;
     }
@@ -58,7 +54,7 @@ public class Dealership {
     }
 
     public void addVehicle(Vehicle v){
-        inventory.add(v);
+        this.inventory.add(v);
     }
     public List<Vehicle> getVehiclesByPrice(double min, double max){
         return null;
@@ -79,9 +75,7 @@ public class Dealership {
     public List<Vehicle> getVehiclesByType(String vehicleType){
         return null;
     }
-    public void removeVehicle(String vehicle){
-       //doesnt return
+    public void removeVehicle(Vehicle vehicle){
+       inventory.remove(vehicle);
     }
-
-
 }
