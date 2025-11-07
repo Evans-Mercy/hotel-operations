@@ -53,28 +53,78 @@ public class Dealership {
         return new ArrayList<>(inventory);
     }
 
+    //add a vehicle
     public void addVehicle(Vehicle v){
         this.inventory.add(v);
     }
+
+    //search by price
     public List<Vehicle> getVehiclesByPrice(double min, double max){
-        return null;
+        List<Vehicle> result = new ArrayList<>();
+        for (Vehicle v : inventory) {
+            if (v.getPrice() >= min && v.getPrice() <= max) {
+                result.add(v);
+            }
+        }
+        return result;
     }
 
+    //search by make
     public List<Vehicle> getVehiclesByMake(String make, String model){
-        return null;
+        List<Vehicle> result = new ArrayList<>();
+        for (Vehicle v : inventory){
+            if (v.getMake().equalsIgnoreCase(make) && v.getModel().equalsIgnoreCase(model)){
+                result.add(v);
+            }
+        }
+        return result;
     }
+
+    //search by year
     public List<Vehicle> getVehiclesByYear(int min, int max){
-        return null;
+        List<Vehicle> result = new ArrayList<>();
+        for (Vehicle v : inventory){
+            if (v.getYear() >= min && v.getYear() <= max){
+                result.add(v);
+            }
+        }
+        return result;
     }
+
+    //search by color
     public List<Vehicle> getVehiclesByColor(String color){
-        return null;
+        List<Vehicle> result = new ArrayList<>();
+        for (Vehicle v : inventory){
+            if (v.getColor().equalsIgnoreCase(color)){
+                result.add(v);
+            }
+        }
+        return result;
     }
+
+    //search by mileage
     public List<Vehicle> getVehiclesByMileage(double min, double max){
-        return null;
+        List<Vehicle> result = new ArrayList<>();
+        for (Vehicle v : inventory){
+            if (v.getOdometer() >= min && v.getOdometer() <= max){
+                result.add(v);
+            }
+        }
+        return result;
     }
+
+    //search by vehicle type
     public List<Vehicle> getVehiclesByType(String vehicleType){
-        return null;
+        List<Vehicle> result = new ArrayList<>();
+        for (Vehicle v : inventory){
+            if (v.getVehicleType().equalsIgnoreCase(vehicleType)){
+                result.add(v);
+            }
+        }
+        return result;
     }
+
+    //remove a vehicle
     public void removeVehicle(Vehicle vehicle){
        inventory.remove(vehicle);
     }

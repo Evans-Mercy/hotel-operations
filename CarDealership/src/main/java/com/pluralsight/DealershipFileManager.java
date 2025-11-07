@@ -1,15 +1,13 @@
 package com.pluralsight;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.List;
 
 public class DealershipFileManager {
+    private final String fileName = "src/main/resources/inventory.csv";
 
-    //reads the file, parsing the data, dealership object- vehicles, save a dealership
+    //reads the file, parsing the data, dealership object - vehicles, save a dealership
     public Dealership getDealership(){
-        String fileName = "src/main/resources/inventory.csv";
 
       try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
 
@@ -44,4 +42,22 @@ public class DealershipFileManager {
       return null;
       }
 
+      //save dealership back to file
+    public void saveDealership(Dealership dealership) {
+
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))){
+            //first line - dealership info
+            writer.write(dealership.getName() + "|" + dealership.getAddress() + "|" +dealership.getPhone());
+            writer.newLine();
+
+            //remaining lines - vehicles
+            List<Vehicle> vehicles = dealership.getAllVehicles();
+            for (Vehicle v : vehicles) {
+                writer.write(v.getVin() + "|" + v.getYear() + "|" + v.getMake() + "|" + v.getModel() + "|" + v.getVehicleType() + "|" + v.getColor() + "|" + v.getOdometer() + "|" + v.getPrice());
+                writer.newLine();
+            }
+        }catch (IOException e) {
+            System.out.println("Error saving that data queen: " + e.getMessage());
+        }
+    }
 }
